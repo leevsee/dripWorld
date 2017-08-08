@@ -1,0 +1,26 @@
+<template name="hasMore">
+  <!--<block wx:if="{{hasMore.show}}">-->
+  <!--<view hidden="{{hasMore.show}}">-->
+    <block wx:if="{{hasMore.type == 1}}">
+      <view class="loading-tip {{hasMore.customloadingCss}}">
+        <view class="loadEffect {{hasMore.customCss}}">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </view>
+        {{hasMore.loadingMessage}}
+      </view>
+    </block>
+    <block wx:elif="{{hasMore.type == 0}}">
+      <view class="loading-tip {{hasMore.customloadingCss}}">{{hasMore.moreMessage}}</view>
+    </block>
+    <block wx:else>
+      <view class="loading-tip {{hasMore.customloadingCss}}">{{hasMore.noMessage}}</view>
+    </block>
+  <!--</block>-->
+</template>
